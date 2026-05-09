@@ -1,0 +1,10 @@
+title: Personal Site
+description: A personal site built with Jekyll and deployed on GitHub Pages.
+url: ""
+baseurl: ""
+
+theme: minima
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
