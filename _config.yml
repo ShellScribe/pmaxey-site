@@ -1,10 +1,26 @@
-title: Personal Site
-description: A personal site built with Jekyll and deployed on GitHub Pages.
+title: Paul Maxey
+description: Cloud and platform engineering portfolio for Paul Maxey, focused on infrastructure, automation, reliability, and secure operations.
+lang: en
 url: "https://shellscribe.github.io"
 baseurl: "/personal-site"
 
-theme: minima
 plugins:
   - jekyll-feed
 
 markdown: kramdown
+kramdown:
+  input: GFM
+
+header_pages:
+  - about.md
+  - experience.md
+  - projects.md
+  - skills.md
+  - contact.md
+
+exclude:
+  - AGENTS.md
+  - README.md
+  - docs/
+  - _dev/
+  - _scripts/

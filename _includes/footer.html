@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="site-footer__inner shell">
+    <div class="site-footer__copy">
+      <p class="site-credit">Paul Maxey.</p>
+    </div>
+    <details class="quiet-console" data-quiet-console>
+      <summary class="quiet-console__summary">
+        <span class="quiet-console__trigger-prompt">guest@pmaxey.com:~$</span>
+        <span class="quiet-console__trigger-label">Terminal</span>
+      </summary>
+      <div class="quiet-console__panel" aria-label="Terminal" data-quiet-panel data-cat-image="{{ '/assets/images/wallpapers/cat-sunbeam-small.jpg' | relative_url }}">
+        <div class="quiet-console__chrome">
+          <div class="quiet-console__controls" aria-label="Terminal window controls">
+            <button class="quiet-console__control quiet-console__control--close" type="button" aria-label="Close terminal" title="Close terminal" data-quiet-close></button>
+            <button class="quiet-console__control quiet-console__control--minimize" type="button" aria-label="Minimize terminal" title="Minimize terminal" data-quiet-minimize></button>
+            <button class="quiet-console__control quiet-console__control--maximize" type="button" aria-label="Maximize terminal" title="Maximize terminal" aria-pressed="false" data-quiet-maximize></button>
+          </div>
+          <span class="quiet-console__title" aria-hidden="true">terminal</span>
+        </div>
+        <div class="quiet-console__screen" data-quiet-output aria-live="polite">
+          <p><span class="quiet-console__prompt">guest@pmaxey.com:~$</span></p>
+        </div>
+        <form class="quiet-console__form" data-quiet-form>
+          <label class="visually-hidden" for="quiet-command">Terminal command</label>
+          <span class="quiet-console__prompt" aria-hidden="true">guest@pmaxey.com:~$</span>
+          <span class="quiet-console__typed" data-quiet-visible-command aria-hidden="true"></span>
+          <span class="quiet-console__cursor" aria-hidden="true"></span>
+          <input class="quiet-console__input" id="quiet-command" name="command" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="help" data-quiet-input>
+        </form>
+      </div>
+    </details>
+  </div>
+</footer>

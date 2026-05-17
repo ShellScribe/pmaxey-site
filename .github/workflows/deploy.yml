@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: "pages"
@@ -29,13 +27,16 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        run: |
-          bundle install
-          bundle exec jekyll build --source . --destination ./_site
+        run: bundle exec jekyll build --source . --destination ./_site
+      - name: Minify JavaScript artifact
+        run: ruby _scripts/minify-js.rb ./_site/assets/js/site-terminal.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

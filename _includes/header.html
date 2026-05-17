@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="site-header__inner shell">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="site-brand__mark" aria-hidden="true">
+        <svg class="site-brand__cluster" viewBox="0 0 32 32" focusable="false">
+          <circle class="site-brand__cluster-star site-brand__cluster-star--main" cx="13.4" cy="16.8" r="2.2" />
+          <circle class="site-brand__cluster-star site-brand__cluster-star--bright" cx="22.8" cy="9.1" r="1.25" />
+          <circle class="site-brand__cluster-star" cx="25.6" cy="22.1" r="0.85" />
+          <circle class="site-brand__cluster-star site-brand__cluster-star--dim" cx="7.4" cy="11.6" r="0.7" />
+          <circle class="site-brand__cluster-star" cx="8.9" cy="25.2" r="0.55" />
+          <circle class="site-brand__cluster-star site-brand__cluster-star--dim" cx="17.9" cy="5.8" r="0.48" />
+          <circle class="site-brand__cluster-star" cx="5.1" cy="19.8" r="0.42" />
+          <circle class="site-brand__cluster-star site-brand__cluster-star--dim" cx="28.1" cy="14.7" r="0.38" />
+          <path class="site-brand__cluster-glint site-brand__cluster-glint--one" d="M22.8 5.2V13M18.9 9.1H26.7" />
+          <path class="site-brand__cluster-glint site-brand__cluster-glint--two" d="M25.6 19.5V24.7M23 22.1H28.2" />
+        </svg>
+      </span>
+      <span>{{ site.title }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      {% for item in site.header_pages %}
+        {% assign nav_page = site.pages | where: "path", item | first %}
+        {% if nav_page %}
+          <a href="{{ nav_page.url | relative_url }}"{% if page.url == nav_page.url %} aria-current="page"{% endif %}>{{ nav_page.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>
