@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Experience
+description: Experience summary for Paul Maxey across cloud platforms, hybrid networking, security operations, automation, and systems support.
 permalink: /experience/
 ---
 

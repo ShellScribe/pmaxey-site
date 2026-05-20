@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Selected Projects
+description: Selected cloud, automation, migration, search, and reporting projects from Paul Maxey's platform engineering portfolio.
 permalink: /projects/
 ---
 

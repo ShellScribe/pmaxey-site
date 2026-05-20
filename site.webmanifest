@@ -1,0 +1,23 @@
+---
+---
+{
+  "name": {{ site.title | jsonify }},
+  "short_name": {{ site.title | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "start_url": {{ "/" | relative_url | jsonify }},
+  "display": "standalone",
+  "background_color": {{ site.theme_color | default: "#05070d" | jsonify }},
+  "theme_color": {{ site.theme_color | default: "#05070d" | jsonify }},
+  "icons": [
+    {
+      "src": {{ "/assets/icons/apple-touch-icon.png" | relative_url | jsonify }},
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": {{ "/assets/icons/favicon-32x32.png" | relative_url | jsonify }},
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

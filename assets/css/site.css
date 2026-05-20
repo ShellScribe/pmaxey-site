@@ -842,7 +842,8 @@ h1 {
   margin: 0;
 }
 
-.motion-card__media img {
+.motion-card__media img,
+.motion-card__media video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -854,6 +855,10 @@ h1 {
     0 0 34px rgba(86, 191, 212, 0.10);
   filter: grayscale(0.1) contrast(1.08) brightness(0.86);
   opacity: 0.86;
+}
+
+.motion-card__still {
+  display: none;
 }
 
 .motion-card figcaption {
@@ -1278,6 +1283,14 @@ h1 {
 
   .quiet-console__cursor {
     animation: none !important;
+  }
+
+  .motion-card__video {
+    display: none;
+  }
+
+  .motion-card__still {
+    display: block;
   }
 }
 

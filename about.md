@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+description: About Paul Maxey's approach to understandable infrastructure, practical automation, secure operations, and reliable delivery.
 permalink: /about/
 ---
 

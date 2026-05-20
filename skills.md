@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Skills
+description: Cloud and platform engineering capabilities across infrastructure, automation, operations, reliability, and secure delivery.
 permalink: /skills/
 ---
 
