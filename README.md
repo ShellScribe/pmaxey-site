@@ -25,3 +25,9 @@ Deployment is defined as code via GitHub Actions in `.github/workflows/deploy.ym
 - Pushes to `main` build the Jekyll site.
 - The workflow publishes the generated `_site` artifact to GitHub Pages.
 - `workflow_dispatch` is enabled for manual deployments.
+
+## AI-Assisted Development
+
+This repository may use AI-assisted tools for planning, implementation support, code review, and verification. Public-facing portfolio content should remain accurate, human-reviewed, and free of AI/process/scaffold language.
+
+Repository rules, review standards, and contributor guidance live in `AGENTS.md` and `docs/`.
