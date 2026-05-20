@@ -1,8 +1,35 @@
 <head>
+  {% assign page_title = site.title %}
+  {% if page.title and page.title != 'Home' %}
+    {% assign page_title = page.title | append: ' | ' | append: site.title %}
+  {% endif %}
+  {% assign meta_description = page.description | default: site.description %}
+  {% assign og_type = page.og_type | default: 'website' %}
+  {% assign og_image = page.og_image | default: site.og_image %}
+  {% assign og_image_alt = page.og_image_alt | default: site.og_image_alt %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.title != 'Home' %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="theme-color" content="{{ site.theme_color | default: '#05070d' }}">
+  <title>{{ page_title | escape }}</title>
+  <meta name="description" content="{{ meta_description | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" href="{{ '/assets/icons/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ meta_description | escape }}">
+  <meta property="og:type" content="{{ og_type | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {% if og_image %}
+    <meta property="og:image" content="{{ og_image | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    {% if og_image_alt %}
+      <meta property="og:image:alt" content="{{ og_image_alt | escape }}">
+    {% endif %}
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>

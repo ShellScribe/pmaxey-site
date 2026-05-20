@@ -3,6 +3,10 @@ description: Cloud and platform engineering portfolio for Paul Maxey, focused on
 lang: en
 url: "https://shellscribe.github.io"
 baseurl: "/personal-site"
+author: Paul Maxey
+theme_color: "#05070d"
+og_image: /assets/images/social/og-image.jpg
+og_image_alt: Half-lit moon against a dark sky, used as the Paul Maxey portfolio preview image.
 
 plugins:
   - jekyll-feed
@@ -21,6 +25,7 @@ header_pages:
 exclude:
   - AGENTS.md
   - README.md
+  - assets/images/motion/orion-satellite-signal.gif
   - docs/
   - _dev/
   - _scripts/

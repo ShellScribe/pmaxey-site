@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Home
+description: Senior cloud and platform engineering portfolio for Paul Maxey, focused on infrastructure, automation, reliability, and secure operations.
 hero_title: Cloud Platforms Built to Stay on Course
 hero_kicker: Senior cloud & platform engineer
 hero_image: /assets/images/wallpapers/hero-moon-1800.jpg
@@ -41,10 +42,11 @@ hero_alt: Half-lit moon with visible craters against a black sky.
     <h2>A satellite crossing near Orion's Sword</h2>
   </div>
   <figure class="motion-card__media">
-    <picture>
-      <source media="(prefers-reduced-motion: reduce)" srcset="{{ "/assets/images/motion/orion-satellite-signal-still.jpg" | relative_url }}">
-      <img class="motion-card__gif" src="{{ "/assets/images/motion/orion-satellite-signal.gif" | relative_url }}" alt="Satellite moving through a grainy night-sky field above Orion." width="420" height="236" loading="lazy">
-    </picture>
+    <video class="motion-card__video" autoplay loop muted playsinline controls preload="metadata" poster="{{ "/assets/images/motion/orion-satellite-signal-still.jpg" | relative_url }}" width="420" height="236" aria-label="Satellite moving through a grainy night-sky field above Orion.">
+      <source src="{{ "/assets/images/motion/orion-satellite-signal.webm" | relative_url }}" type="video/webm">
+      <source src="{{ "/assets/images/motion/orion-satellite-signal.mp4" | relative_url }}" type="video/mp4">
+    </video>
+    <img class="motion-card__still" src="{{ "/assets/images/motion/orion-satellite-signal-still.jpg" | relative_url }}" alt="Satellite moving through a grainy night-sky field above Orion." width="420" height="236" loading="lazy">
     <figcaption>Satellite pass above Orion.</figcaption>
   </figure>
 </article>

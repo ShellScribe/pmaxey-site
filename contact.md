@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact
+description: Contact information and professional profile links for Paul Maxey.
 permalink: /contact/
 ---
 
