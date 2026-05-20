@@ -858,7 +858,7 @@ h1 {
 }
 
 .motion-card__still {
-  display: none;
+  display: none !important;
 }
 
 .motion-card figcaption {
@@ -1290,7 +1290,7 @@ h1 {
   }
 
   .motion-card__still {
-    display: block;
+    display: block !important;
   }
 }
 

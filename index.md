@@ -46,7 +46,7 @@ hero_alt: Half-lit moon with visible craters against a black sky.
       <source src="{{ "/assets/images/motion/orion-satellite-signal.webm" | relative_url }}" type="video/webm">
       <source src="{{ "/assets/images/motion/orion-satellite-signal.mp4" | relative_url }}" type="video/mp4">
     </video>
-    <img class="motion-card__still" src="{{ "/assets/images/motion/orion-satellite-signal-still.jpg" | relative_url }}" alt="Satellite moving through a grainy night-sky field above Orion." width="420" height="236" loading="lazy">
+    <img class="motion-card__still" src="{{ "/assets/images/motion/orion-satellite-signal-still.jpg" | relative_url }}" alt="Satellite moving through a grainy night-sky field above Orion." width="420" height="236" loading="lazy" style="display: none;">
     <figcaption>Satellite pass above Orion.</figcaption>
   </figure>
 </article>
