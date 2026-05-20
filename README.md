@@ -8,6 +8,7 @@ This repository contains a Jekyll-based professional portfolio deployed to GitHu
 
 - Ruby 3.1+
 - Bundler
+- Node.js 20+ and npm for production JavaScript artifact optimization
 
 ### Run locally
 
@@ -18,11 +19,23 @@ bundle exec jekyll serve
 
 Then open <http://localhost:4000/personal-site/>.
 
+Local development serves readable source JavaScript from `assets/js/`.
+To preview the production artifact optimization step after a Jekyll build, run:
+
+```bash
+npm ci
+bundle exec jekyll build --source . --destination ./_site
+npm run optimize:js
+```
+
+The optimizer minifies generated JavaScript with Terser, writes content-hashed script filenames in `_site/assets/js/`, and rewrites generated site references before deployment.
+
 ## Deployment IaC
 
 Deployment is defined as code via GitHub Actions in `.github/workflows/deploy.yml`.
 
 - Pushes to `main` build the Jekyll site.
+- The build runs a central JavaScript optimization step against the generated `_site` artifact.
 - The workflow publishes the generated `_site` artifact to GitHub Pages.
 - `workflow_dispatch` is enabled for manual deployments.
 

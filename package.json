@@ -1,0 +1,10 @@
+{
+  "name": "paul-maxey-portfolio",
+  "private": true,
+  "scripts": {
+    "optimize:js": "ruby _scripts/optimize-js-assets.rb ./_site"
+  },
+  "devDependencies": {
+    "terser": "^5.43.1"
+  }
+}

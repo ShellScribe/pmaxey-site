@@ -37,6 +37,8 @@ Expected major version:
 ruby 3.x
 ```
 
+Node.js 20+ and npm are used for the production JavaScript optimization step.
+
 Install dependencies:
 
 ```bash
@@ -48,6 +50,15 @@ Build the site:
 ```bash
 bundle exec jekyll build
 ```
+
+Optimize generated JavaScript artifacts after a build:
+
+```bash
+npm ci
+npm run optimize:js
+```
+
+This keeps source JavaScript readable during local development while matching the deploy-time minified and content-hashed script assets when needed.
 
 Preview locally with the GitHub Pages project base URL:
 

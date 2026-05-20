@@ -24,3 +24,6 @@ exclude:
   - docs/
   - _dev/
   - _scripts/
+  - node_modules/
+  - package-lock.json
+  - package.json

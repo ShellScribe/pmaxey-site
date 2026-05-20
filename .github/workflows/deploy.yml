@@ -23,13 +23,20 @@ jobs:
         with:
           ruby-version: '3.3'
           bundler-cache: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install JavaScript tooling
+        run: npm ci
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         run: bundle exec jekyll build --source . --destination ./_site
-      - name: Minify JavaScript artifact
-        run: ruby _scripts/minify-js.rb ./_site/assets/js/site-terminal.js
+      - name: Optimize JavaScript artifacts
+        run: npm run optimize:js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
