@@ -12,6 +12,9 @@
   <meta name="theme-color" content="{{ site.theme_color | default: '#05070d' }}">
   <title>{{ page_title | escape }}</title>
   <meta name="description" content="{{ meta_description | escape }}">
+  {% if page.robots %}
+    <meta name="robots" content="{{ page.robots | escape }}">
+  {% endif %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" sizes="any">
   <link rel="icon" href="{{ '/assets/icons/favicon.svg' | relative_url }}" type="image/svg+xml">
@@ -30,6 +33,5 @@
       <meta property="og:image:alt" content="{{ og_image_alt | escape }}">
     {% endif %}
   {% endif %}
-  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
