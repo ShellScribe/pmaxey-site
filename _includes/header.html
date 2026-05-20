@@ -17,7 +17,11 @@
       </span>
       <span>{{ site.title }}</span>
     </a>
-    <nav class="site-nav" aria-label="Primary navigation">
+    <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-site-nav-toggle>
+      <span class="visually-hidden" data-site-nav-toggle-label>Open primary navigation</span>
+      <span class="site-nav-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-site-nav>
       {% for item in site.header_pages %}
         {% assign nav_page = site.pages | where: "path", item | first %}
         {% if nav_page %}
