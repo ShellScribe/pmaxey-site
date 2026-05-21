@@ -1452,16 +1452,17 @@ h1 {
   }
 
   .home-grid::before {
-    left: 1.18rem;
+    display: none;
   }
 
-  .section-card,
-  .section-card:nth-child(even),
-  .section-card--wide {
+  .home-grid > .section-card {
     grid-column: 1;
-    width: calc(100% - 2.65rem);
+    grid-row: auto;
+    justify-self: stretch;
+    width: 100%;
+    padding-top: 4rem;
     margin-block: 0;
-    margin-left: 2.65rem;
+    margin-left: 0;
     transform: none;
   }
 
@@ -1473,7 +1474,7 @@ h1 {
   .section-card:nth-child(even)::before,
   .section-card--wide::before,
   .section-card:nth-child(even).section-card--wide::before {
-    inset: 1.1rem auto auto -2.95rem;
+    inset: 1.05rem auto auto 1.1rem;
     transform: none;
   }
 
