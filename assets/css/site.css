@@ -790,7 +790,12 @@ h1 {
   transform: none;
 }
 
-.section-card--wide::before {
+.section-card--wide + .section-card--wide {
+  margin-top: 3.75rem;
+}
+
+.section-card--wide::before,
+.section-card:nth-child(even).section-card--wide::before {
   inset: -3.15rem auto auto 50%;
   transform: translateX(-50%);
 }
@@ -1460,9 +1465,14 @@ h1 {
     transform: none;
   }
 
+  .section-card--wide + .section-card--wide {
+    margin-top: 0;
+  }
+
   .section-card::before,
   .section-card:nth-child(even)::before,
-  .section-card--wide::before {
+  .section-card--wide::before,
+  .section-card:nth-child(even).section-card--wide::before {
     inset: 1.1rem auto auto -2.95rem;
     transform: none;
   }
