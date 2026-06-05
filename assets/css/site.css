@@ -449,7 +449,17 @@ button:focus-visible {
   position: relative;
   z-index: 1;
   background:
+    linear-gradient(180deg, rgba(2, 4, 10, 0) 62%, rgba(2, 4, 10, 0.42) 88%, rgba(2, 4, 10, 0.78) 100%),
     linear-gradient(90deg, rgba(5, 7, 13, 0.90) 0%, rgba(5, 7, 13, 0.70) 34%, rgba(5, 7, 13, 0.12) 62%, rgba(5, 7, 13, 0.24) 100%);
+  pointer-events: none;
+}
+
+.hero__overlay::after {
+  position: absolute;
+  inset: auto 0 -6rem;
+  height: 6rem;
+  content: "";
+  background: linear-gradient(180deg, rgba(2, 4, 10, 0.78), rgba(2, 4, 10, 0));
   pointer-events: none;
 }
 
@@ -1505,7 +1515,12 @@ h1 {
 
   .hero__overlay {
     background:
+      linear-gradient(180deg, rgba(2, 4, 10, 0) 58%, rgba(2, 4, 10, 0.46) 86%, rgba(2, 4, 10, 0.82) 100%),
       linear-gradient(90deg, rgba(5, 7, 13, 0.92), rgba(5, 7, 13, 0.58));
+  }
+
+  .hero__overlay::after {
+    background: linear-gradient(180deg, rgba(2, 4, 10, 0.82), rgba(2, 4, 10, 0));
   }
 
   .hero__content {
