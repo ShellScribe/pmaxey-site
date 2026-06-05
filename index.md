@@ -4,9 +4,9 @@ title: Home
 description: Senior cloud and platform engineering portfolio for Paul Maxey, focused on infrastructure, automation, reliability, and secure operations.
 hero_title: Cloud Platforms Built to Stay on Course
 hero_kicker: Senior cloud & platform engineer
-hero_image: /assets/images/wallpapers/hero-moon-1800.jpg
-hero_image_small: /assets/images/wallpapers/hero-moon-1100.jpg
-hero_alt: Half-lit moon with visible craters against a black sky.
+hero_image: /assets/images/wallpapers/hero-moon-transparent-demo.png
+hero_image_small: /assets/images/wallpapers/hero-moon-transparent-demo-small.png
+hero_alt: Half-lit moon with visible craters.
 ---
 
 <article class="section-card">
