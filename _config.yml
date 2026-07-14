@@ -1,8 +1,8 @@
 title: Paul Maxey
 description: Cloud and platform engineering portfolio for Paul Maxey, focused on infrastructure, automation, reliability, and secure operations.
 lang: en
-url: "https://shellscribe.github.io"
-baseurl: "/personal-site"
+url: "https://pmaxey.com"
+baseurl: ""
 author: Paul Maxey
 theme_color: "#05070d"
 og_image: /assets/images/social/og-image.jpg

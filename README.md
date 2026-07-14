@@ -17,7 +17,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Then open <http://localhost:4000/personal-site/>.
+Then open <http://localhost:4000/>.
 
 Local development serves readable source JavaScript from `assets/js/`.
 To preview the production artifact optimization step after a Jekyll build, run:

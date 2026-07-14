@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shellscribe.github.io/personal-site/sitemap.xml
+Sitemap: https://pmaxey.com/sitemap.xml

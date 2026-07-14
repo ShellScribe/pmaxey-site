@@ -9,7 +9,7 @@ Agents may:
 - Inspect `Gemfile`, `_config.yml`, `.gitignore`, and source files.
 - Run `bundle install`.
 - Run `bundle exec jekyll build`.
-- Run `bundle exec jekyll serve --baseurl /personal-site` for local preview.
+- Run `bundle exec jekyll serve` for local preview.
 - Update `.gitignore` if build artifacts are not ignored.
 - Fix minimal dependency or configuration issues needed for local build.
 
@@ -60,16 +60,16 @@ npm run optimize:js
 
 This keeps source JavaScript readable during local development while matching the deploy-time minified and content-hashed script assets when needed.
 
-Preview locally with the GitHub Pages project base URL:
+Preview locally:
 
 ```bash
-bundle exec jekyll serve --baseurl /personal-site
+bundle exec jekyll serve
 ```
 
 Then open:
 
 ```text
-http://127.0.0.1:4000/personal-site/
+http://127.0.0.1:4000/
 ```
 
 ## Ruby Version
