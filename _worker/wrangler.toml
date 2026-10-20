@@ -1,0 +1,25 @@
+name = "pmaxey-contact"
+main = "src/index.mjs"
+compatibility_date = "2026-10-19"
+workers_dev = false
+preview_urls = false
+
+# Separate manual deployment only. Preserve the existing GitHub Pages DNS targets.
+# Both routes require proxied (orange-cloud) DNS. Never broaden to an apex /* route.
+routes = [
+  { pattern = "https://pmaxey.com/api/contact*", zone_name = "pmaxey.com" },
+  { pattern = "https://pmaxey.com/_crawler/*", zone_name = "pmaxey.com" }
+]
+
+[vars]
+ALLOWED_ORIGIN = "https://pmaxey.com"
+TURNSTILE_HOSTNAME = "pmaxey.com"
+TURNSTILE_ACTION = "contact"
+# Set CONTACT_EMAIL and TURNSTILE_SECRET as Worker secrets, never here.
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[observability.logs]
+invocation_logs = false

@@ -2,7 +2,10 @@
   "name": "paul-maxey-portfolio",
   "private": true,
   "scripts": {
-    "optimize:js": "ruby _scripts/optimize-js-assets.rb ./_site"
+    "optimize:js": "ruby _scripts/optimize-js-assets.rb ./_site",
+    "test": "node --test _worker/test/*.test.mjs _scripts/test/*.test.mjs",
+    "test:site": "node _scripts/check-public-site.mjs _site",
+    "dev:contact": "node _scripts/serve-contact-demo.mjs"
   },
   "devDependencies": {
     "terser": "^5.43.1"

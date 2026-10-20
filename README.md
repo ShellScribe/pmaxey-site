@@ -44,3 +44,11 @@ Deployment is defined as code via GitHub Actions in `.github/workflows/deploy.ym
 This repository may use AI-assisted tools for planning, implementation support, code review, and verification. Public-facing portfolio content should remain accurate, human-reviewed, and free of AI/process/scaffold language.
 
 Repository rules, review standards, and contributor guidance live in `AGENTS.md` and `docs/`.
+
+## Contact verification and crawler experiments
+
+The static site stays on GitHub Pages. A separately deployed Cloudflare Worker
+handles contact-email verification and three lightweight honeypots. Setup,
+local preview, privacy, costs, AI Labyrinth activation and rollback are documented
+in [docs/BOT_PROTECTION.md](docs/BOT_PROTECTION.md). Run `npm test` for the offline
+Worker/UI tests and `npm run test:site` after building and optimizing the site.

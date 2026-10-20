@@ -1595,3 +1595,24 @@ h1 {
   }
 
 }
+
+/* Email stays in the contact list; verification expands only when requested. */
+.crawler-traps { display: none !important; }
+[data-contact-gate] [hidden] { display: none !important; }
+.contact-reveal {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cyan);
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: rgba(155, 216, 232, 0.42);
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+.contact-reveal:hover { color: #d8f6ff; }
+.contact-reveal:disabled { opacity: 0.7; cursor: wait; }
+[data-contact-status], [data-contact-gate] noscript small { display: block; margin-top: 0.35rem; }
+[data-contact-widget] { margin-top: 1rem; }
+[data-contact-result] { overflow-wrap: anywhere; }
