@@ -12,6 +12,7 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   var promptText = "guest@pmaxey.com:~$ ";
   var catImage = panel ? panel.getAttribute("data-cat-image") : "";
+  var contactUrl = panel ? panel.getAttribute("data-contact-url") : "";
   var minimizeTimer;
 
   if (!consoleDetails || !panel || !form || !input || !output || !visibleCommand || !closeButton || !minimizeButton || !maximizeButton) {
@@ -28,7 +29,9 @@
       "  status   show site status",
       "  date     print current date",
       "  cat      concatenate files and print on the standard output",
-      "  clear    clear the terminal"
+      "  clear    clear the terminal",
+      "  contact  find the contact page",
+      "  security explain bot protections"
     ],
     ls: [
       "about  experience  projects  skills  contact  cat.jpg"
@@ -43,7 +46,16 @@
       "site: online",
       "build: static",
       "tracking: none",
-      "contact: pmaxey.ks9k6@simplelogin.com"
+      "contact: " + contactUrl
+    ],
+    contact: [
+      "Contact page: " + contactUrl,
+      "Use the verification check there to reveal the email address."
+    ],
+    security: [
+      "Email reveal requires a server-verified Turnstile check.",
+      "Crawler traps are signals, not proof of malicious intent.",
+      "A trap request does not trigger an automatic ban."
     ],
     date: [
       new Date().toDateString()

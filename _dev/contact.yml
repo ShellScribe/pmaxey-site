@@ -1,0 +1,3 @@
+# Local preview only. Official always-pass Turnstile sitekey.
+turnstile_sitekey: "1x00000000000000000000AA"
+turnstile_action: "test"

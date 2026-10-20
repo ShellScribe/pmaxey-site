@@ -15,6 +15,10 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+# Public Turnstile sitekey only. Private values live in Worker secret bindings.
+turnstile_sitekey: "0x4AAAAAAFcgq2yp5O0hmmUg"
+turnstile_action: "contact"
+
 header_pages:
   - about.md
   - experience.md
@@ -32,3 +36,4 @@ exclude:
   - node_modules/
   - package-lock.json
   - package.json
+  - _worker/
